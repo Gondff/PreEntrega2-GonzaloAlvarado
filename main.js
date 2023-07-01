@@ -10,12 +10,12 @@ class Estudiante{
     }
 }
 
-function generarComision(estudiante){
+function generarComision(estudiante) {
     let numDni = parseInt(estudiante.dni);
-    if(numDni %2 === 0){
-        return estudiante.comision = 43125;
-    }else{
-        return estudiante.comsion = 43150;
+    if (numDni % 2 === 0) {
+        estudiante.comision = 43125;
+    } else {
+        estudiante.comision = 43150;
     }
 }
 
@@ -59,7 +59,7 @@ function listarEstudiantes(){
 
 //Funcion para buscar estudiante por DNI
 function buscarEstudiantePorDni(){
-    let dniBuscado = prompt("Ingrese el DNI que desea buscar");
+    let dniBuscado = parseInt(prompt("Ingrese el DNI que desea buscar"));
 
     let estudianteEncontrado = curso.find((estudiante) => estudiante.dni === dniBuscado);
 
